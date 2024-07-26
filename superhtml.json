@@ -1,0 +1,22 @@
+[
+  {
+    "hash": "164nhl1w95b5jp8z699a6q4r37q8dgrnaa1h8gql57iq8cs3821x",
+    "binary_system": "x86_64-linux-musl",
+    "name": "x86_64-linux"
+  },
+  {
+    "hash": "0zsvj73jr4d7q8yd0mpdcxgnh6a8lgs2dd56n9pzgh7f1mpmhgr5",
+    "binary_system": "aarch64-linux",
+    "name": "aarch64-linux"
+  },
+  {
+    "hash": "02r2y2i784w21y5f96ykwx7h0b0slkpv0k9rgcr9ln4dgn92g1sx",
+    "binary_system": "x86_64-macos",
+    "name": "x86_64-darwin"
+  },
+  {
+    "hash": "1hb5pb8sxh55r925j7jzdzxbwfw3psn11y0szf4lrr1d80y7kzgk",
+    "binary_system": "aarch64-macos",
+    "name": "aarch64-darwin"
+  }
+]

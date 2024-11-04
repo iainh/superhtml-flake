@@ -1,4 +1,30 @@
 {
+  "v0.5.3": {
+    "x86_64-linux": {
+      "hash": "02nnfqn971jj3rzl7kxz4nciiilb5sabf7kcgsk3h7l5ayyvpyn9",
+      "version": "v0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/v0.5.3/x86_64-linux-musl.tar.gz",
+      "downloaded-system": "x86_64-linux-musl"
+    },
+    "aarch64-linux": {
+      "hash": "0nv0ivxdrjcw61allkr76p4vqgfa131fg8m0cr8vhr36vqa29kal",
+      "version": "v0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/v0.5.3/aarch64-linux.tar.gz",
+      "downloaded-system": "aarch64-linux"
+    },
+    "x86_64-darwin": {
+      "hash": "0s04kgj39vp56jklwvgw2lix7p7wcs56b75bsj0p02kshraxgl28",
+      "version": "v0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/v0.5.3/x86_64-macos.tar.gz",
+      "downloaded-system": "x86_64-macos"
+    },
+    "aarch64-darwin": {
+      "hash": "1jaywrk2lw63q1s1gfgxplz42p6xg884wa314111dwvgcrzk5cmq",
+      "version": "v0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/v0.5.3/aarch64-macos.tar.gz",
+      "downloaded-system": "aarch64-macos"
+    }
+  },
   "v0.5.0": {
     "x86_64-linux": {
       "hash": "0ifmsz9yc5scjkm0nmqqjgd8pa5frfy73qydyjb17jyjhaizhkxd",
@@ -126,6 +152,32 @@
       "hash": "0nv26b2cfn446f2331n5rbibi1f3rps4g0aq65zrj3s7hxhx63xg",
       "version": "v0.4.0",
       "url": "https://github.com/kristoff-it/superhtml/releases/download/v0.4.0/aarch64-macos.tar.gz",
+      "downloaded-system": "aarch64-macos"
+    }
+  },
+  "0.5.3": {
+    "x86_64-linux": {
+      "hash": "",
+      "version": "0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/0.5.3/x86_64-linux-musl.tar.gz",
+      "downloaded-system": "x86_64-linux-musl"
+    },
+    "aarch64-linux": {
+      "hash": "",
+      "version": "0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/0.5.3/aarch64-linux.tar.gz",
+      "downloaded-system": "aarch64-linux"
+    },
+    "x86_64-darwin": {
+      "hash": "",
+      "version": "0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/0.5.3/x86_64-macos.tar.gz",
+      "downloaded-system": "x86_64-macos"
+    },
+    "aarch64-darwin": {
+      "hash": "",
+      "version": "0.5.3",
+      "url": "https://github.com/kristoff-it/superhtml/releases/download/0.5.3/aarch64-macos.tar.gz",
       "downloaded-system": "aarch64-macos"
     }
   }

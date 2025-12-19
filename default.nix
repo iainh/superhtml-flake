@@ -24,7 +24,7 @@ let
       '';
       installPhase = ''
         mkdir -p $out/bin/
-        cp ${downloaded-system}/superhtml $out/bin
+        cp superhtml $out/bin
       '';
     };
   tagged = lib.attrsets.mapAttrs (

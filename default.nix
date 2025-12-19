@@ -20,7 +20,7 @@ let
         sha256 = hash;
       };
       unpackPhase = ''
-        tar -azf $src
+        tar -xf $src
       '';
       installPhase = ''
         mkdir -p $out/bin/

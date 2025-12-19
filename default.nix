@@ -1,15 +1,17 @@
 {
-  pkgs ? import <nixpkgs> {},
+  pkgs ? import <nixpkgs> { },
   system ? builtins.currentSystem,
-}: let
+}:
+let
   inherit (pkgs) lib;
   sources = builtins.fromJSON (builtins.readFile ./superhtml.json);
-  mkBinaryInstall = {
-    url,
-    version,
-    hash,
-    downloaded-system
-  }:
+  mkBinaryInstall =
+    {
+      url,
+      version,
+      hash,
+      downloaded-system,
+    }:
     pkgs.stdenvNoCC.mkDerivation {
       name = "superhtml-${version}";
       inherit version;
@@ -18,21 +20,26 @@
         sha256 = hash;
       };
       unpackPhase = ''
-        tar -xzf $src
+        tar -azf $src
       '';
       installPhase = ''
         mkdir -p $out/bin/
         cp ${downloaded-system}/superhtml $out/bin
       '';
     };
-  tagged =
-    lib.attrsets.mapAttrs
-    (k: v: mkBinaryInstall {inherit (v.${system}) version url hash downloaded-system;})
-    sources;
+  tagged = lib.attrsets.mapAttrs (
+    k: v:
+    mkBinaryInstall {
+      inherit (v.${system})
+        version
+        url
+        hash
+        downloaded-system
+        ;
+    }
+  ) sources;
   latest = lib.lists.last (
-    builtins.sort
-    (x: y: (builtins.compareVersions x y) < 0)
-    (builtins.attrNames tagged)
+    builtins.sort (x: y: (builtins.compareVersions x y) < 0) (builtins.attrNames tagged)
   );
 in
-  tagged // {"default" = tagged.${latest};}
+tagged // { "default" = tagged.${latest}; }

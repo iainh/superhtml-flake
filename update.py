@@ -28,7 +28,11 @@ def main():
     }
     item = {}
     for system in systems:
-        url = f"https://github.com/kristoff-it/superhtml/releases/download/{version}/{system}.tar.gz"
+        ext = "zip"
+        if "linux" in system:
+            ext = "tar.xz"
+        
+        url = f"https://github.com/kristoff-it/superhtml/releases/download/{version}/{system}.{ext}"
         prefetch_hash_output = subprocess.run(
             ["nix-prefetch-url", f"{url}"], capture_output=True
         )

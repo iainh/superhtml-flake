@@ -59,15 +59,16 @@
     "superhtml": {
       "flake": false,
       "locked": {
-        "lastModified": 1760761738,
-        "narHash": "sha256-9RizfSi+ouCcLUL2+gPc8GljNo9KCX57VElLSlha05A=",
+        "lastModified": 1766933270,
+        "narHash": "sha256-jbFqp6fMUzsUgtna3C6xYojezqdXt1wO8GBDrGLpuRw=",
         "owner": "iainh",
         "repo": "superhtml",
-        "rev": "8b5bb272b269afdd38cdf641c4a707dd92fbe902",
+        "rev": "4e4f1ef6a0f148a99e4fbb3a6d5d1146cf6d6296",
         "type": "github"
       },
       "original": {
         "owner": "iainh",
+        "ref": "driver",
         "repo": "superhtml",
         "type": "github"
       }

@@ -4,7 +4,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    superhtml.url = "github:iainh/superhtml";
+    superhtml.url = "github:iainh/superhtml/driver";
     superhtml.flake = false;
   };
 

@@ -1,24 +1,46 @@
 {
-  description = "Description for the project";
+  description = "superhtml flake";
 
   inputs = {
-    flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    superhtml.url = "github:iainh/superhtml/driver";
-    superhtml.flake = false;
+    zig-overlay.url = "github:mitchellh/zig-overlay";
+    superhtml = {
+      url = "github:iainh/superhtml/driver";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ flake-parts, superhtml, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+  outputs = { nixpkgs, zig-overlay, superhtml, ... }:
+    let
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
-      perSystem = { pkgs, system, ... }: 
-      {
-        packages = import ./default.nix {inherit system pkgs superhtml;};
-        devShells = {
-            default = pkgs.mkShell {
-                buildInputs = with pkgs; [python3 ];
-            };
-        };
-      };
+      forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
+    in
+    {
+      packages = forAllSystems (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          zig = zig-overlay.packages.${system}.default;
+        in
+        {
+          default = pkgs.stdenv.mkDerivation {
+            name = "superhtml";
+            src = superhtml;
+            nativeBuildInputs = [ zig ];
+            dontConfigure = true;
+            dontInstall = true;
+            buildPhase = ''
+              export ZIG_GLOBAL_CACHE_DIR=$(mktemp -d)
+              zig build -Doptimize=ReleaseSafe --prefix $out
+            '';
+          };
+        });
+
+      devShells = forAllSystems (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in {
+          default = pkgs.mkShell {
+            buildInputs = [ pkgs.python3 ];
+          };
+        });
     };
 }

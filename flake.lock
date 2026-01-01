@@ -76,11 +76,11 @@
     "superhtml": {
       "flake": false,
       "locked": {
-        "lastModified": 1766967524,
-        "narHash": "sha256-t1fv7fCuO+TzpJK696vHcf6p9DXr/NMAGJMy4Aj4fOo=",
+        "lastModified": 1767296071,
+        "narHash": "sha256-67zrqQwitlPfh6ZFlatdT+4StLSZv/1Sv3Bd5ykXCeQ=",
         "owner": "iainh",
         "repo": "superhtml",
-        "rev": "6d86ba8ea7992c5d7d146a32ef4525f5ea8840f4",
+        "rev": "d2806bcb67d50643ccb6bb2fc058083745a4d3dc",
         "type": "github"
       },
       "original": {

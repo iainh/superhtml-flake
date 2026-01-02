@@ -76,11 +76,11 @@
     "superhtml": {
       "flake": false,
       "locked": {
-        "lastModified": 1767296071,
-        "narHash": "sha256-67zrqQwitlPfh6ZFlatdT+4StLSZv/1Sv3Bd5ykXCeQ=",
+        "lastModified": 1767315996,
+        "narHash": "sha256-Bc7WOgvta8Fh2LvcLVcPq9Z5xpGzGbrDRVIdk1ZNcL4=",
         "owner": "iainh",
         "repo": "superhtml",
-        "rev": "d2806bcb67d50643ccb6bb2fc058083745a4d3dc",
+        "rev": "bf5cc0c0d9e79f65c96bbb1f8a743e15ef5d8299",
         "type": "github"
       },
       "original": {
@@ -112,11 +112,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1767228139,
-        "narHash": "sha256-/lHHMxuJH2nOzJPXCnxWlNkQFfaVYYWVbgtywdC1hkY=",
+        "lastModified": 1767314278,
+        "narHash": "sha256-mC4L0GgjWS8YmMCA8okWoJQbS5g4vvebJ+pJFUsU/8w=",
         "owner": "mitchellh",
         "repo": "zig-overlay",
-        "rev": "8b1e3bbf79f52c50b5ed64a06b5d4639dec9f50d",
+        "rev": "0d583fe28ba7ad18b24817223a642ef6e454cc0c",
         "type": "github"
       },
       "original": {
